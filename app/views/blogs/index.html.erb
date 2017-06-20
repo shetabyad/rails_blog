@@ -1,0 +1,9 @@
+<% @blogs.each do |blog| %>
+	<div class="well">
+		<div class="container">
+			<h2><%= link_to blog.title, blog %></h2>
+			<p><%= blog.body %></p>
+			<%= link_to 'Edit this post', edit_blog_path(blog), class: "btn btn-default" %>
+		</div>
+	</div>
+<% end %>

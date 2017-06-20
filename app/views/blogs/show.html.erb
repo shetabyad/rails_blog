@@ -1,0 +1,25 @@
+<% if flash[:notice] %>
+	<div class="alert alert-success" role="alert">
+		<div class="container"><%= flash[:notice] %></div>
+	</div>
+<% end %>
+
+<% if flash[:alert] %>
+	<div class="alert alert-danger" role="alert">
+		<div class="container"><%= flash[:alert] %></div>
+	</div>
+<% end %>
+
+
+<div class="container">
+	<div class="page-header">
+		<h1><%= @blog.title %></h1>
+	</div>
+	<p><%= @blog.body %></p>
+	<hr>
+	<div class="btn-group">
+		<%= link_to "Edit this post", edit_blog_path(@blog), class: "btn btn-info" %> 
+		<%= link_to "Delete this post", @blog, method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, class: "btn btn-danger" %>
+	</div>
+</div>
+

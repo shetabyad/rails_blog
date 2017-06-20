@@ -1,0 +1,11 @@
+<div class="container">
+	<h1>Edit your post:</h1>
+</div>
+<%= render 'shared/form' %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<%= link_to "Delete this post", @blog, method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, class: "btn btn-danger" %>
+		</div>
+	</div>
+</div>
